@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/backgroundColor"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/signup" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to DocSync!"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        android:layout_gravity="center">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textColorHint="@color/hinttextColor"
+        android:background="@drawable/customedittext"
+        android:textCursorDrawable="@drawable/cursor"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/textColor"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textColorHint="@color/hinttextColor"
+        android:background="@drawable/customedittext"
+        android:textCursorDrawable="@drawable/cursor"
+        android:padding="12dp"
+        android:textColor="@color/textColor"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textColorHint="@color/hinttextColor"
+        android:background="@drawable/customedittext"
+        android:textCursorDrawable="@drawable/cursor"
+        android:padding="12dp"
+        android:textColor="@color/textColor"
+        android:inputType="textPassword"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="@color/textColor"
+        android:backgroundTint="@color/buttonBackgroundColor"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="© 2024 Abtahi Md. Mahib Uddin"
+        android:textColor="@color/hinttextColor"
+        android:textSize="10sp">
+
+    </TextView>
+</LinearLayout>

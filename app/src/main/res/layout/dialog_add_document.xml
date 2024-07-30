@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialogbackgroundColor">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:textColorHighlight="@color/textColorHighlight"
+        android:textColorHint="@color/hinttextColor"
+        android:background="@drawable/customedittext"
+        android:textCursorDrawable="@drawable/cursor"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/textColor" />
+
+    <EditText
+        android:id="@+id/contentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Content *"
+        android:textColorHighlight="@color/textColorHighlight"
+        android:textColorHint="@color/hinttextColor"
+        android:background="@drawable/customedittext"
+        android:textCursorDrawable="@drawable/cursor"
+        android:padding="20dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="10sp"
+        android:text="* This will be a public document. Don't share any sensitive information like API Keys, Credit Cards, Passwords."
+        android:layout_gravity="center"
+        android:textColor="@color/hinttextColor"
+        android:textAlignment="center">
+    </TextView>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to DocSync"
+        android:textColor="@color/textColor"
+        android:backgroundTint="@color/buttonBackgroundColor"
+        android:layout_marginTop="8dp" />
+</LinearLayout>
+</ScrollView>

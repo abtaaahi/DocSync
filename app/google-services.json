@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "597758042546",
+    "project_id": "docsync01",
+    "storage_bucket": "docsync01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597758042546:android:e4245dd803cc9a0a0b44ab",
+        "android_client_info": {
+          "package_name": "com.abtahiapp.docsync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDyzv_OtwDfmwnUPzg2oxj-U7AFNVeKJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

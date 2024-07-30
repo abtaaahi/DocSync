@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="backgroundColor">#0D1117</color>
+    <color name="textColor">#E6EDF3</color>
+    <color name="hinttextColor">#7A7D80</color>
+    <color name="buttonBackgroundColor">#238636</color>
+    <color name="edittextBorder">#7A7D80</color>
+    <color name="titiletextColorblue">#1F6FEB</color>
+    <color name="detailstextColor">#7A7D80</color>
+    <color name="titiletextColorgreen">#238636</color>
+    <color name="dialogbackgroundColor">#202630</color>
+    <color name="textColorHighlight">#238636</color>
+
+    <color name="highlight_blue">#1F6FEB</color>
+    <color name="highlight_red">#DA3633</color>
+
+    <color name="commitbutton">#E8AA42</color>
+
+</resources>

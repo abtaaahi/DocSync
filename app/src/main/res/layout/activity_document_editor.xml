@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/userInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Document Editor"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/uploadButton"
+            android:src="@drawable/upload"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:tooltipText="Upload Document"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/saveButton"
+            android:src="@drawable/save"
+            android:tooltipText="Save Document"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/shareButton"
+            android:src="@drawable/share"
+            android:tooltipText="Share Document"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:textSize="14sp"
+        android:textColorHighlight="@color/textColorHighlight"
+        android:textColorHint="@color/hinttextColor"
+        android:background="@drawable/customedittext"
+        android:textCursorDrawable="@drawable/cursor"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/textColor" />
+
+    <EditText
+        android:id="@+id/contentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="300dp"
+        android:hint="Content"
+        android:textSize="14sp"
+        android:textColorHighlight="@color/textColorHighlight"
+        android:textColorHint="@color/hinttextColor"
+        android:background="@drawable/customedittext"
+        android:textCursorDrawable="@drawable/cursor"
+        android:padding="20dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="10sp"
+        android:text="This will be a public document. Don't share any sensitive information like API Keys, Credit Cards, Passwords."
+        android:layout_gravity="center"
+        android:textColor="@color/hinttextColor"
+        android:textAlignment="center">
+    </TextView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:id="@+id/creatorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detailstextColor"
+            android:text="Created by"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:id="@+id/creationTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detailstextColor"
+            android:text="Creation time" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:id="@+id/lastEditorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detailstextColor"
+            android:text="Last edited by" />
+
+        <TextView
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:id="@+id/lastEditTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detailstextColor"
+            android:text="Last edit time" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/originalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Original Docs"
+            android:drawableLeft="@drawable/original"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/textColor"
+            android:backgroundTint="@color/dialogbackgroundColor" />
+
+        <Button
+            android:id="@+id/pastEditorButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Past Editors"
+            android:drawableLeft="@drawable/pasteditors"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/textColor"
+            android:backgroundTint="@color/dialogbackgroundColor" />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/commitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Commit Changes"
+        android:drawableLeft="@drawable/commit"
+        android:layout_marginStart="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:backgroundTint="@color/textColorHighlight"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

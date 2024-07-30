@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/originalContentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Original Content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/originalTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="bold"
+            android:textIsSelectable="true"
+            android:textColorHighlight="@color/textColorHighlight"
+            android:textSize="14sp"
+            android:textColor="@color/textColor"/>
+
+        <TextView
+            android:id="@+id/originalContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="250dp"
+            android:text=""
+            android:textIsSelectable="true"
+            android:textColorHighlight="@color/textColorHighlight"
+            android:textSize="14sp"
+            android:textColor="@color/textColor" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/editedVersionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edited Version"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/textColor" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pastEditorsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

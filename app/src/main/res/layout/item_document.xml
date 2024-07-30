@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/custombackgroundforitems"
+    android:layout_marginBottom="16dp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:id="@+id/creatorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detailstextColor"
+            android:text="Created by"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:id="@+id/creationTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detailstextColor"
+            android:text="Creation time" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:layout_marginTop="6dp"
+        android:maxLines="2"
+        android:textSize="20sp"
+        android:textColor="@color/textColor"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/contentTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Content"
+        android:maxLines="6"
+        android:ellipsize="end"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="6dp" />
+
+    <LinearLayout
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:id="@+id/lastEditorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detailstextColor"
+            android:text="Last edited by" />
+
+        <TextView
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:id="@+id/lastEditTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/detailstextColor"
+            android:text="Last edit time" />
+
+    </LinearLayout>
+
+</LinearLayout>

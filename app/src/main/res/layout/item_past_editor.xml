@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:text="Username" />
+
+        <TextView
+            android:id="@+id/editTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:textAlignment="textEnd"
+            android:text="Edit Time" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/updatedTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:textIsSelectable="true"
+        android:textStyle="bold"
+        android:textColorHighlight="@color/textColorHighlight"
+        android:text="Updated Title" />
+
+    <TextView
+        android:id="@+id/updatedContentTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:textIsSelectable="true"
+        android:textColorHighlight="@color/textColorHighlight"
+        android:text="Updated Content" />
+</LinearLayout>
