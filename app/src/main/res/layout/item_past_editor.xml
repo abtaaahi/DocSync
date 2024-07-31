@@ -16,6 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/textColor"
             android:text="Username" />
@@ -25,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/textColor"
             android:textAlignment="textEnd"
@@ -38,8 +40,9 @@
         android:layout_height="wrap_content"
         android:textColor="@color/textColor"
         android:textIsSelectable="true"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:textColorHighlight="@color/textColorHighlight"
+        android:textColorHighlight="@color/commitbutton"
         android:text="Updated Title" />
 
     <TextView
@@ -48,6 +51,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/textColor"
         android:textIsSelectable="true"
-        android:textColorHighlight="@color/textColorHighlight"
+        android:textSize="16sp"
+        android:textColorHighlight="@color/commitbutton"
         android:text="Updated Content" />
 </LinearLayout>

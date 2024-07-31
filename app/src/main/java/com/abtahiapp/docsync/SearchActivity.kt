@@ -111,7 +111,8 @@ class SearchActivity : AppCompatActivity() {
                         if (document.title.contains(query, ignoreCase = true) ||
                             document.content.contains(query, ignoreCase = true) ||
                             document.creatorUsername.contains(query, ignoreCase = true)) {
-                            documents.add(document)
+//                            documents.add(document)
+                            document?.let { documents.add(0, it) }
                         }
                     }
                 }

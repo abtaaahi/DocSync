@@ -69,9 +69,9 @@ class PastEditorAdapter(
             val spannableString = SpannableString(updatedText)
 
             val color = if (isTitle) {
-                ContextCompat.getColor(context, R.color.highlight_blue)
-            } else {
                 ContextCompat.getColor(context, R.color.highlight_red)
+            } else {
+                ContextCompat.getColor(context, R.color.commitbutton)
             }
 
             if (originalText != updatedText) {
