@@ -103,6 +103,7 @@ class DocumentEditorActivity : AppCompatActivity() {
         }
 
         commitButton.setOnClickListener { updateDocument() }
+
         pastEditorButton.setOnClickListener {
             showPastEditorsActivity()
         }

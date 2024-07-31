@@ -54,7 +54,7 @@ class DocumentAdapter(
             if(document.lastEditorUsername.isEmpty()){
                 lastEditorTextView.text = ""
             } else{
-                lastEditorTextView.text = "Last Edited By: ${document.lastEditorUsername}"
+                lastEditorTextView.text = "Last Edit: ${document.lastEditorUsername}"
             }
 
             if(document.lastEditTime == 0L){
