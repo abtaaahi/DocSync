@@ -39,8 +39,8 @@ class LoginActivity : AppCompatActivity() {
                             startActivity(intent)
                             finish()
                         } else {
-                            //Toast.makeText(this, "Authentication Failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show
-                            Toast.makeText(this, "Wrong Password / Email", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                            //Toast.makeText(this, "Wrong Password / Email", Toast.LENGTH_SHORT).show()
                         }
                     }
             }
