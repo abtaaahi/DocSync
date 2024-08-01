@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var userInfoTextView: TextView
     private lateinit var searchButton: Button
 
+    private val ADD_DOCUMENT_REQUEST_CODE = 1
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,8 +78,11 @@ class MainActivity : AppCompatActivity() {
             documentRecyclerView.adapter = documentAdapter
 
             addButton.setOnClickListener {
-                showAddDocumentDialog()
+                val intent = Intent(this, AddDocSyncActivity::class.java)
+                intent.putExtra("username", username)
+                startActivityForResult(intent, ADD_DOCUMENT_REQUEST_CODE)
             }
+
             fetchDocuments()
         }
     }
@@ -106,37 +111,5 @@ class MainActivity : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
             }
         })
-    }
-
-    private fun showAddDocumentDialog() {
-        val dialog = BottomSheetDialog(this)
-        val view = layoutInflater.inflate(R.layout.dialog_add_document, null)
-        val titleEditText = view.findViewById<EditText>(R.id.titleEditText)
-        val contentEditText = view.findViewById<EditText>(R.id.contentEditText)
-        val addButton = view.findViewById<Button>(R.id.addButton)
-
-        addButton.setOnClickListener {
-            val title = titleEditText.text.toString()
-            val content = contentEditText.text.toString()
-
-            if (title.isNotEmpty() && content.isNotEmpty()) {
-                val documentId = database.push().key ?: ""
-                val document = Document(
-                    id = documentId,
-                    title = title,
-                    content = content,
-                    creatorUsername = username,
-                    creationTime = System.currentTimeMillis(),
-                    lastEditorUsername= "",
-                    lastEditTime = 0L,
-                    originalTitle = title,
-                    originalContent = content
-                )
-                database.child(documentId).setValue(document)
-                dialog.dismiss()
-            }
-        }
-        dialog.setContentView(view)
-        dialog.show()
     }
 }
