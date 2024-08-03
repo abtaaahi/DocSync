@@ -38,8 +38,6 @@ android {
 
 dependencies {
 
-    implementation ("io.socket:socket.io-client:2.0.0")
-
     implementation("com.google.firebase:firebase-auth:21.0.1")
     implementation("com.google.firebase:firebase-database:20.0.4")
     implementation("com.google.code.gson:gson:2.8.8")
