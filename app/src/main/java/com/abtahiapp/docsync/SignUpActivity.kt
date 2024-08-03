@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import android.content.Context
+import android.content.SharedPreferences
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -50,6 +52,8 @@ class SignUpActivity : AppCompatActivity() {
                                 val emailMap = mapOf("emailID" to email)
                                 emailRef.setValue(emailMap)
                                 database.child("emails").child(it.uid).setValue(email)
+                                saveUserDetails(userId, username, email)
+
                                 startActivity(Intent(this, MainActivity::class.java))
                                 finish()
                             }
@@ -60,6 +64,15 @@ class SignUpActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show()
             }
+        }
+    }
+    private fun saveUserDetails(userId: String, username: String, email: String) {
+        val sharedPreferences = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+        with(sharedPreferences.edit()) {
+            putString("user_id", userId)
+            putString("username", username)
+            putString("email", email)
+            apply()
         }
     }
 }

@@ -87,13 +87,13 @@ class DocumentEditorActivity : AppCompatActivity() {
 
         titleEditText.setText(document.title)
         contentEditText.setText(document.content)
-        creatorTextView.text = "Created by: ${document.creatorUsername}"
+        creatorTextView.text = "Created: ${document.creatorUsername}"
         creationTimeTextView.text = "${formatTimestamp(document.creationTime)}"
 
         if (document.lastEditorUsername.isEmpty()) {
             lastEditorTextView.text = ""
         } else {
-            lastEditorTextView.text = "Last Edited By: ${document.lastEditorUsername}"
+            lastEditorTextView.text = "Last Edited: ${document.lastEditorUsername}"
         }
 
         if (document.lastEditTime == 0L) {
@@ -102,7 +102,9 @@ class DocumentEditorActivity : AppCompatActivity() {
             lastEditTimeTextView.text = "${formatTimestamp(document.lastEditTime)}"
         }
 
-        commitButton.setOnClickListener { updateDocument() }
+        commitButton.setOnClickListener {
+            updateDocument()
+        }
 
         pastEditorButton.setOnClickListener {
             showPastEditorsActivity()

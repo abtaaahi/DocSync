@@ -7,6 +7,9 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import android.content.Context
+import android.content.SharedPreferences
+import com.google.firebase.database.FirebaseDatabase
 
 class LoginActivity : AppCompatActivity() {
 
@@ -35,9 +38,15 @@ class LoginActivity : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
-                            val intent = Intent(this, MainActivity::class.java)
-                            startActivity(intent)
-                            finish()
+//                            val intent = Intent(this, MainActivity::class.java)
+//                            startActivity(intent)
+//                            finish()
+                            val user = auth.currentUser
+                            user?.let {
+                                val userId = it.uid
+                                // Fetch and save user details in SharedPreferences
+                                fetchUserDetails(userId)
+                            }
                         } else {
                             Toast.makeText(this, "${task.exception?.message}", Toast.LENGTH_SHORT).show()
                             //Toast.makeText(this, "Wrong Password / Email", Toast.LENGTH_SHORT).show()
@@ -66,6 +75,27 @@ class LoginActivity : AppCompatActivity() {
                 false
             }
             else -> true
+        }
+    }
+
+    private fun fetchUserDetails(userId: String) {
+        val userRef = FirebaseDatabase.getInstance().getReference("users").child(userId)
+        userRef.get().addOnSuccessListener { snapshot ->
+            val username = snapshot.getValue(String::class.java) ?: "Unknown"
+            saveUserDetails(userId, username)
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }.addOnFailureListener {
+            Toast.makeText(this, "Failed to fetch user details", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun saveUserDetails(userId: String, username: String) {
+        val sharedPreferences = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+        with(sharedPreferences.edit()) {
+            putString("user_id", userId)
+            putString("username", username)
+            apply()
         }
     }
 }

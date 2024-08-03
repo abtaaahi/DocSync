@@ -1,5 +1,6 @@
 package com.abtahiapp.docsync
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -59,6 +60,10 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
+        val sharedPreferences = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+        val savedUsername = sharedPreferences.getString("username", "")
+        userInfoTextView.text = savedUsername
+
         fetchUsernameFromDatabase { fetchedUsername ->
             username = fetchedUsername
             //val userEmail = auth.currentUser?.email ?: "Unknown"
@@ -66,7 +71,8 @@ class MainActivity : AppCompatActivity() {
             userInfoTextView.text = username
 
             documents = mutableListOf()
-            documentAdapter = DocumentAdapter(documents) { document ->
+            documentAdapter = DocumentAdapter(documents)
+            { document ->
                 val intent = Intent(this, DocumentEditorActivity::class.java)
                 val gson = Gson()
                 val documentJson = gson.toJson(document)

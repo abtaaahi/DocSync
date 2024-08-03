@@ -67,9 +67,11 @@
     <EditText
         android:id="@+id/contentEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxHeight="300dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:hint="Content"
+        android:textAlignment="textStart"
+        android:gravity="start"
         android:textSize="14sp"
         android:textColorHighlight="@color/textColorHighlight"
         android:textColorHint="@color/hinttextColor"
@@ -80,6 +82,7 @@
         android:textColor="@color/textColor" />
 
     <TextView
+        android:id="@+id/noteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -172,14 +175,13 @@
             android:drawableLeft="@drawable/pasteditors"
             android:textStyle="bold"
             android:textSize="12sp"
+            android:maxLines="1"
             android:layout_weight="1"
             android:layout_marginStart="5dp"
             android:textColor="@color/textColor"
             android:backgroundTint="@color/dialogbackgroundColor" />
 
     </LinearLayout>
-
-
 
     <Button
         android:id="@+id/commitButton"
