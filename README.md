@@ -1,19 +1,19 @@
-
 # DocSync - Document Syncing
 
 DocSync is a comprehensive document syncing application designed to enhance document management and collaboration.
 
 The app features a seamless integration of Firebase for authentication and real-time database storage, ensuring a robust and interactive user experience.
 
-App Preview: https://youtu.be/5tqxx5ZuGpw?si=qMH9OFpHBhXJo-m4
+## Demo Video
 
+[![DocSync Demo Video](https://img.youtube.com/vi/5tqxx5ZuGpw/hqdefault.jpg)](https://youtu.be/5tqxx5ZuGpw)
+
+## API Reference
 Firebase: https://console.firebase.google.com/u/0/
 
 Authentication: https://firebase.google.com/docs/auth
 
 Database: https://firebase.google.com/docs/database
-## API Reference
-
 #### Dependencies 
 
 ```
